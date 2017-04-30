@@ -1,0 +1,82 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <center><div class="panel-title">Sign Up Your Discard</div></center>
+  </div>  
+  <div class="panel-body" >
+    <form id="signupform" class="form-horizontal" role="form">
+
+      <div id="signupalert" style="display:none" class="alert alert-danger">
+        <p>Erro:</p>
+        <span></span>
+      </div>
+      <div class="form-group">
+        <label for="suscard" class="col-md-3 control-label">Name</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="name" placeholder="Kescila Konda">
+        </div>
+      </div>                                  
+      <div class="form-group">
+        <label for="firstname" class="col-md-3 control-label">Phone</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="telefone" placeholder="(44) 5555-5555">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="endereco" class="col-md-3 control-label">Address</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="endereco" placeholder="Ex: Street, Nº, District, City, State">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="horario" class="col-xs-2 col-sm-2 control-label">Time</label> 
+        <div class="col-xs-4 col-sm-4">
+          <input type="text" class="form-control" name="horario" placeholder="11:00">
+        </div>
+        <label for="data"   class="col-xs-2 col-sm-2 control-label">Date</label>
+        <div class="col-xs-4 col-sm-4">
+          <input type="text" class="form-control" name="data" placeholder="2017/04/30">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Item" class="col-xs-2 col-sm-2 control-label">Item</label>
+        <div class="col-xs-4 col-sm-4">
+          <select id="repeatSelect" ng-model="data.model">
+            <option ng-repeat="option in discardObj" value="{{Item.id}}">{{option.descricao}}</option>
+          </select>
+        </div>
+        <label for="Quantity" class="col-xs-2 col-sm-2 control-label">Quantity</label>
+        <div class="col-xs-4 col-sm-4">
+          <input type="text" class="form-control" name="Quantity" placeholder="30 un.">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="peso" class="col-md-3 control-label">Weight</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="peso" placeholder="100,00 kg">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="size" class="col-md-3 control-label">Size</label>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="size" placeholder="10 cm³">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- Button -->                                        
+        <div class="col-md-offset-8 col-md-4">
+          <button id="btn-signup" type="button" class="btn btn-info btn-sm" ng-click="redirect('/')"><i class="icon-hand-right"></i>Submit</button>
+        </div>
+      </div>
+
+<!--      <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Cadastre-se com o Facebook</button>
+                                    </div>
+                                    <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Voltar à tela de Login <<<</a></div>                                           
+
+            </div>   -->       
+        </form>
+    </div>
+</div>

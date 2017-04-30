@@ -1,0 +1,33 @@
+<div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" ng-model="search" placeholder="search">
+        </div>
+      </div>
+      <br><br>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="info">
+              <th>Item</th>
+            </tr>
+          </thead>
+          <div>
+          <tbody ng-repeat="discard in discardObj | filter:search">          
+
+          </dir>
+            <tr>
+              <td>
+                <input type="checkbox" ng-model="discard.checked" > <label>{{discard.descricao}}</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+      <button class="btn btn-block btn-info" ng-click="redirect('/signupDiscard')">GO!</button>
+    </div>
+  </div>
+</div>
